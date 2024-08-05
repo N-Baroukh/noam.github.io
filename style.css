@@ -334,7 +334,8 @@ footer {
     text-align: center;
     width: 250px; /* largeur de l'encadré */
     height: 50px; /* hauteur de l'encadré */
-    margin: 20px auto; /* marge pour centrer l'encadré */
+    margin: 20px; /* marge pour séparer les éléments */
+    display: inline-block; /* afficher les éléments côte à côte */
 }
 
 .encadre-cv a {
@@ -346,4 +347,37 @@ footer {
 
 .encadre-cv a:hover {
     text-decoration: underline;
+}
+.outils-container {
+    background-color: #f7f7f7;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 40px auto;
+}
+
+.outils-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.outils-grid {
+    display: flex;
+    flex-wrap: nowrap; /* Pour empêcher les éléments de passer à la ligne suivante */
+    justify-content: space-between; /* Espacer uniformément les éléments */
+    align-items: center; /* Alignement vertical des éléments */
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+.outils-grid img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
