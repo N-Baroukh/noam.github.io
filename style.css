@@ -444,3 +444,16 @@ footer {
     margin: 10% auto;
     border-radius: 10px;
 }
+.profil-container {
+    display: flex;
+    align-items: center;
+}
+
+.profil-image {
+    width: 30%;
+    margin-right: 20px;
+}
+
+.profil-text {
+    width: 70%;
+}
