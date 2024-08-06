@@ -175,6 +175,7 @@ header nav ul li a:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
+
 /* Skills styles */
 
 /* Skills styles */
@@ -328,6 +329,8 @@ footer {
     width: 100%;
     position: relative;
 }
+
+/* CV styles */
 .encadre-cv {
     background-color: #007bff; /* fond bleu */
     border: 2px solid #007bff; /* bordure bleu */
@@ -349,6 +352,9 @@ footer {
 .encadre-cv a:hover {
     text-decoration: underline;
 }
+
+/* outils & langages styles */
+
 .outils-container {
     background-color: #fff;
     padding: 40px;
@@ -382,6 +388,9 @@ footer {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Certif styles */
+
 #certifications {
     padding: 20px;
 }
