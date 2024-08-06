@@ -350,7 +350,7 @@ footer {
     text-decoration: underline;
 }
 .outils-container {
-    background-color: #f7f7f7;
+    background-color: #fff;
     padding: 40px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -381,4 +381,57 @@ footer {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#certifications {
+    padding: 20px;
+}
+
+.certifications-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.certification {
+    margin: 20px;
+    width: 200px;
+}
+
+.certification img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.certification p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.full-size {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-size img {
+    object-fit: contain;
+    width: 70%;
+    height: 70%;
+    margin: 10% auto;
+    border-radius: 10px;
 }

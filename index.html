@@ -301,6 +301,60 @@
             </div>
         </div>
     </div>
+    <!-- Section des certifications -->
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="certifications-container">
+            <!-- Certification 1 -->
+            <div class="certification">
+                <img src="Images/ANSSI.jpeg" alt="Certification 1">
+                <p>Certification des MOOC ANSSI</p>
+            </div>
+            <!-- Certification 2 -->
+            <div class="certification">
+                <img src="Images/sololearn.jpeg" alt="Certification 2">
+                <p>Certification en web development de Sololearn</p>
+            </div>
+            <!-- Certification 3 -->
+            <div class="certification">
+                <img src="Images/ciscoCyber.png" alt="Certification 3">
+                <p>Certification cisco liée à la cybersecurité</p>
+            </div>
+            <!-- Certification 4 -->
+            <div class="certification">
+                <img src="Images/cisco.png" alt="Certification 4">
+                <p>Certification cisco liée aux réseaux</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Sélection des images
+        const images = document.querySelectorAll('.certification img');
+
+        // Ajout d'un événement click sur chaque image
+        images.forEach((image) => {
+            image.addEventListener('click', () => {
+                // Création d'un élément div pour contenir l'image agrandie
+                const fullSizeDiv = document.createElement('div');
+                fullSizeDiv.classList.add('full-size');
+
+                // Création d'un élément img pour afficher l'image agrandie
+                const fullSizeImg = document.createElement('img');
+                fullSizeImg.src = image.src;
+
+                // Ajout de l'image agrandie au div
+                fullSizeDiv.appendChild(fullSizeImg);
+
+                // Ajout du div à la page
+                document.body.appendChild(fullSizeDiv);
+
+                // Ajout d'un événement click pour fermer l'image agrandie
+                fullSizeDiv.addEventListener('click', () => {
+                    fullSizeDiv.remove();
+                });
+            });
+        });
+    </script>
     <section id="projets">
         <h2>Mes projets</h2>
         <div class="projets-container">
