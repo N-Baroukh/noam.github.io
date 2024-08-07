@@ -381,6 +381,17 @@
 
         let currentIndex = 0;
 
+
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowLeft') {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : document.querySelectorAll('.certification img').length - 1;
+                showFullSizeImage(currentIndex);
+            } else if (event.key === 'ArrowRight') {
+                currentIndex = (currentIndex < document.querySelectorAll('.certification img').length - 1) ? currentIndex + 1 : 0;
+                showFullSizeImage(currentIndex);
+            }
+        });
         function showFullSizeImage(index) {
             currentIndex = index;
             fullSizeImg.src = document.querySelectorAll('.certification img')[index].src;
