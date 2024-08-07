@@ -355,36 +355,76 @@
         </div>
     </section>
 
+    <div class="full-size" id="fullSizeView" style="display: none;">
+        <button id="prevBtn">◀</button> <!-- Flèche gauche -->
+        <img id="fullSizeImg" src="" alt="Full Size Certification">
+        <button id="nextBtn">▶</button> <!-- Flèche droite -->
+    </div>
+
+
+
     <!-- JS pour zoom les certifs -->
 
     <script>
-        // Sélection des images
-        const images = document.querySelectorAll('.certification img');
-
-        // Ajout d'un événement click sur chaque image
-        images.forEach((image) => {
-            image.addEventListener('click', () => {
-                // Création d'un élément div pour contenir l'image agrandie
-                const fullSizeDiv = document.createElement('div');
-                fullSizeDiv.classList.add('full-size');
-
-                // Création d'un élément img pour afficher l'image agrandie
-                const fullSizeImg = document.createElement('img');
-                fullSizeImg.src = image.src;
-
-                // Ajout de l'image agrandie au div
-                fullSizeDiv.appendChild(fullSizeImg);
-
-                // Ajout du div à la page
-                document.body.appendChild(fullSizeDiv);
-
-                // Ajout d'un événement click pour fermer l'image agrandie
-                fullSizeDiv.addEventListener('click', () => {
-                    fullSizeDiv.remove();
-                });
+        document.querySelectorAll('.certification img').forEach((img, index) => {
+            img.addEventListener('click', () => {
+                showFullSizeImage(index);
             });
         });
+
+        const fullSizeView = document.getElementById('fullSizeView');
+        const fullSizeImg = document.getElementById('fullSizeImg');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let currentIndex = 0;
+
+        function showFullSizeImage(index) {
+            currentIndex = index;
+            fullSizeImg.src = document.querySelectorAll('.certification img')[index].src;
+            fullSizeView.style.display = 'flex';
+        }
+
+        // Ajout de l'événement de clic pour dézoomer l'image
+        fullSizeImg.addEventListener('click', () => {
+            fullSizeView.style.display = 'none';
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : document.querySelectorAll('.certification img').length - 1;
+            showFullSizeImage(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex < document.querySelectorAll('.certification img').length - 1) ? currentIndex + 1 : 0;
+            showFullSizeImage(currentIndex);
+        });
+
+        fullSizeView.addEventListener('click', (e) => {
+            if (e.target !== fullSizeImg && e.target !== prevBtn && e.target !== nextBtn) {
+                fullSizeView.style.display = 'none';
+            }
+        });
     </script>
+
+    <!-- Section Stages -->
+
+    <section id="stages">
+        <h2>Stages</h2>
+        <ul>
+            <li class="stage-row">
+                <figure class="stage-item">
+                    <img src="Images/stage/1ereAnnee/veoliaEau.jpeg" alt="Stage 1ère année">
+                    <figcaption>Texte pour le stage 1ʳᵉ année</figcaption>
+                </figure>
+                <figure class="stage-item">
+                    <img src="Images/stage/1ereAnnee/veoliaEau.jpeg" alt="Stage 1ère année">
+                    <figcaption>Texte pour le stage 2ʳᵉ année</figcaption>
+                </figure>
+            </li>
+        </ul>
+    </section>
+
 
     <!-- Section des projets -->
 

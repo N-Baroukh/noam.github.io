@@ -444,6 +444,29 @@ footer {
     margin: 10% auto;
     border-radius: 10px;
 }
+
+.full-size button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px; /* Augmenter la taille de la police pour les flèches */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#prevBtn {
+    left: 200px;
+}
+
+#nextBtn {
+    right: 200px;
+}
+
+
 .profil-container {
     display: flex;
     align-items: center;
@@ -457,3 +480,34 @@ footer {
 .profil-text {
     width: 70%;
 }
+
+/* stages styles */
+
+#stages {
+    margin: 20px 0;
+}
+
+.stage-row {
+    display: flex;
+    gap: 20px;
+}
+
+.stage-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stage-item img {
+    max-width: 200px; /* Ajustez la taille de l'image selon vos besoins */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.stage-item figcaption {
+    font-size: 14px;
+    color: #333;
+}
+
+
