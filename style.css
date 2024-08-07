@@ -466,6 +466,7 @@ footer {
     right: 200px;
 }
 
+/* profil styles */
 
 .profil-container {
     display: flex;
@@ -509,3 +510,94 @@ footer {
     font-size: 14px;
     color: #333;
 }
+
+/* Styles pour secret abyss */
+
+#synopsis {
+    background-image: url('Images/projets/secretAbyss/ecranAccueil.png');
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    color: #fff;
+}
+
+#style-de-jeu {
+    background-color: #f7f7f7;
+    padding: 30px;
+}
+
+#systeme-de-combat {
+    background-color: #ffe6e6;
+    padding: 30px;
+}
+
+#systeme-d-experience {
+    background-color: #c6f7d8;
+    padding: 30px;
+}
+
+#artefacts {
+    background-color: #fff2cc;
+    padding: 30px;
+}
+
+#quetes {
+    background-color: #cce5ff;
+    padding: 30px;
+}
+
+#menu-principal {
+    background-color: #f0f0f0;
+    padding: 30px;
+}
+
+#carte-du-monde {
+    background-color: #fff;
+    padding: 30px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+.style-image {
+    width: 30%;
+    margin-right: 20px;
+}
+
+.style-text {
+    width: 70%;
+}
+
+.style-de-jeu-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.combat-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.combat-image {
+    width: 20%; /* ajustez la taille des images */
+    margin: 10px;
+    border: 1px solid #ddd; /* ajout d'une bordure pour séparer les images */
+}
+
+.combat-text {
+    width: 100%; /* le texte prend la largeur totale */
+    text-align: center; /* centre le texte */
+    margin-top: 20px; /* ajoute un espace entre les images et le texte */
+}
+
+.combat-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
