@@ -546,11 +546,6 @@ footer {
     padding: 30px;
 }
 
-#systeme-d-experience {
-    background-color: #c6f7d8;
-    padding: 30px;
-}
-
 #artefacts {
     background-color: #fff2cc;
     padding: 30px;
@@ -561,13 +556,23 @@ footer {
     padding: 30px;
 }
 
-#menu-principal {
-    background-color: #f0f0f0;
-    padding: 30px;
+.content-wrapper {
+    display: flex;
+    align-items: center;
 }
 
+.combat-image {
+    margin-right: 20px;
+    max-width: 50%;
+}
+
+#quetes p {
+    margin: 0;
+}
+
+
 #carte-du-monde {
-    background-color: #fff;
+    background-color: #c6f7d8;
     padding: 30px;
 }
 
@@ -609,10 +614,4 @@ footer {
     margin-top: 20px; /* ajoute un espace entre les images et le texte */
 }
 
-.combat-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
 
