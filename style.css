@@ -330,6 +330,21 @@ footer {
     position: relative;
 }
 
+/* Logo Footer */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.image-contact {
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+}
+
 /* CV styles */
 .encadre-cv {
     background-color: #007bff; /* fond bleu */
