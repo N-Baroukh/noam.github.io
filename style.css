@@ -742,3 +742,41 @@ footer {
     background-color: #0056b3; /* Couleur de fond bleue plus foncée au survol */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au survol */
 }
+
+/* Styles pour le bloc de mission */
+#mission {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#mission h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #337ab7;
+}
+
+#mission p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+#mission ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#mission ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+#mission ul li strong {
+    color: #333;
+}
