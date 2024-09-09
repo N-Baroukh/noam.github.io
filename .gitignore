@@ -1,0 +1,16 @@
+# Ignorer les fichiers et dossiers spécifiques à l'IDE PhpStorm
+.idea/
+*.iml
+
+# Ignorer les fichiers de configuration spécifiques à l'IDE
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/gradle.xml
+.idea/inspectionProfiles
+.idea/misc.xml
+.idea/modules.xml
+.idea/runConfigurations
+.idea/usage.statistics.xml
+.idea/*.iml
