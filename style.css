@@ -780,3 +780,47 @@ footer {
 #mission ul li strong {
     color: #333;
 }
+
+/* Styles pour le bloc des outils de stage */
+#outilstage {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#outilstage h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#outilstage .outil {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#outilstage .outil img {
+    max-width: 80px;
+    margin-right: 15px;
+    border-radius: 4px;
+}
+
+#outilstage .outil .details {
+    flex: 1;
+}
+
+#outilstage .outil .details h3 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    color: #007acc;
+}
+
+#outilstage .outil .details p {
+    font-size: 16px;
+    color: #555;
+}
