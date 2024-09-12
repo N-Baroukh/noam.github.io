@@ -14,17 +14,174 @@
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="index.html#profil">Profil</a></li>
-            <li><a href="index.html#parcours">Parcours</a></li>
-            <li><a href="index.html#bts-sio">BTS SIO</a></li>
-            <li><a href="index.html#stages">Stages</a></li>
-            <li><a href="index.html#competences">Compétences</a></li>
-            <li><a href="index.html#projets">Projets</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="#but-projet">Introduction</a></li>
+            <li><a href="#version">Version</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#difficultes-rencontrees">Difficultés</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
         </ul>
     </nav>
 </header>
 <main>
+    <br>
+    <br>
+    <div id="projet-container">
+        <div id="but-projet">
+            <h2>But du Projet</h2>
+            <div class="contenu">
+                <img src="Images/projets/veliko/logoVeliko.png" alt="Logo Veliko">
+                <p>Ce projet a pour objectif de créer une carte interactive affichant toutes les stations Vélib'
+                    d'Île-de-France. Les utilisateurs peuvent visualiser le nombre de vélos disponibles,
+                    qu'ils soient classiques ou électriques, dans chaque station. Une fonctionnalité permet également aux
+                    utilisateurs d'ajouter leurs stations préférées à une liste de favoris pour un accès rapide. Enfin,
+                    le projet inclut la gestion de deux espaces distincts : un espace client permettant à chaque utilisateur
+                    de gérer ses favoris et son compte, et un espace administrateur pour gérer l'ensemble des stations et les données.</p>
+            </div>
+        </div>
+        <div id="info-projet">
+            <h2>Informations sur le Projet</h2>
+            <div class="contenu-info">
+                <ul>
+                    <li><strong>Langages utilisés :</strong> TWIG, PHP, JAVA</li>
+                    <li><strong>Framework utilisé :</strong> EduFrame, Symfony</li>
+                    <li><strong>Base de données :</strong> MySQL</li>
+                    <li><strong>API intégrées :</strong> API Vélib', OpenStreetMap</li>
+                    <li><strong>Date du projet :</strong> 2024 - 2025</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="version">
+        <h2>Les Différentes Versions du Projet</h2>
+        <div class="version-images">
+            <img src="Images/projets/veliko/version/version1.png" alt="Version 1">
+            <img src="Images/projets/veliko/version/version2.png" alt="Version 2">
+            <img src="Images/projets/veliko/version/version3.png" alt="Version 3">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="galerie">
+        <h2>Galerie</h2>
+        <div class="galerie-images">
+            <img src="Images/projets/veliko/carte.png" alt="Carte">
+            <img src="Images/projets/veliko/espaceCompte.png" alt="Espace Compte">
+            <img src="Images/projets/veliko/stations.png" alt="Stations">
+            <img src="Images/projets/veliko/admin.png" alt="Admin">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="difficultes-rencontrees">
+        <h2>Difficultés Rencontrées</h2>
+        <div class="difficultes">
+            <div class="difficulte">
+                <h3>Gestion des API</h3>
+                <p>L'utilisation de l'API Vélib' a présenté plusieurs défis. Il a fallu garantir que l'API soit
+                     intégrée correctement dans la carte, mais aussi accessible au sein de l'espace utilisateur.
+                    Et synchronisé les données entre les deux.</p>
+
+            </div>
+            <div class="difficulte">
+                <h3>Base de Données</h3>
+                <p>- La gestion de la base de données a présenté plusieurs problèmes, notamment l'optimisation des requêtes.
+                    <br>
+                    - La synchronisation des données entre les différentes parties de l'application.
+                    (carte, espace client, espace administrateur)</p>
+            </div>
+            <div class="difficulte">
+                <h3>CRUD</h3>
+                <p>Le développement des espaces clients et administrateurs a posé des problèmes
+                    au niveau du CRUD. Il a fallu créer des interfaces utilisateur adaptées à chaque
+                    type de rôle tout en garantissant la protection des données et la gestion efficace des
+                    fonctionnalités comme les favoris et les données des stations.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="full-size" id="fullSizeView" style="display: none;">
+        <button id="prevBtn">◀</button> <!-- Flèche gauche -->
+        <img id="fullSizeImg" src="" alt="Full Size Image">
+        <video id="fullSizeVideo" width="640" height="480" controls></video>
+        <button id="nextBtn">▶</button> <!-- Flèche droite -->
+    </div>
+
+    <script>
+        document.querySelectorAll('.galerie-images img').forEach((media, index) => {
+            media.addEventListener('click', () => {
+                showFullSizeMedia(index);
+            });
+        });
+
+        const fullSizeView = document.getElementById('fullSizeView');
+        const fullSizeImg = document.getElementById('fullSizeImg');
+        const fullSizeVideo = document.getElementById('fullSizeVideo');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let currentIndex = 0;
+
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowLeft') {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : document.querySelectorAll('.galerie-images img').length - 1;
+                showFullSizeMedia(currentIndex);
+            } else if (event.key === 'ArrowRight') {
+                currentIndex = (currentIndex < document.querySelectorAll('.galerie-images img').length - 1) ? currentIndex + 1 : 0;
+                showFullSizeMedia(currentIndex);
+            }
+        });
+
+        function showFullSizeMedia(index) {
+            currentIndex = index;
+            const media = document.querySelectorAll('.galerie-images img')[index];
+            if (media.tagName === 'IMG') {
+                fullSizeImg.src = media.src;
+                fullSizeImg.style.display = 'block';
+                fullSizeVideo.style.display = 'none';
+            } else if (media.tagName === 'VIDEO') {
+                fullSizeVideo.innerHTML = ''; // Vide le contenu de l'élément video
+                const source = document.createElement('source');
+                source.src = media.querySelector('source').src;
+                source.type = 'video/mp4';
+                fullSizeVideo.appendChild(source);
+                fullSizeVideo.style.display = 'block';
+                fullSizeVideo.play(); // Démarrer la vidéo
+                fullSizeImg.style.display = 'none';
+            }
+            fullSizeView.style.display = 'flex';
+        }
+
+
+        // Ajout de l'événement de clic pour dézoomer l'image
+        fullSizeImg.addEventListener('click', () => {
+            fullSizeView.style.display = 'none';
+        });
+
+        fullSizeVideo.addEventListener('click', () => {
+            fullSizeView.style.display = 'none';
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : document.querySelectorAll('.galerie-images img').length - 1;
+            showFullSizeMedia(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex < document.querySelectorAll('.galerie-images img').length - 1) ? currentIndex + 1 : 0;
+            showFullSizeMedia(currentIndex);
+        });
+
+        fullSizeView.addEventListener('click', (e) => {
+            if (e.target !== fullSizeImg && e.target !== fullSizeVideo && e.target !== prevBtn && e.target !== nextBtn) {
+                fullSizeView.style.display = 'none';
+            }
+        });
+
+    </script>
 
     <!--    permet de remonter tout en haut du site -->
     <a href="#" class="scroll-to-top" id="scrollToTop">
