@@ -41,7 +41,7 @@
     <section id="profil">
         <h2>Qui suis-je ?</h2>
         <div class="profil-container">
-<!--            <img src="Images/profil/profil.jpg" alt="Photo de vous" class="profil-image">-->
+            <!--            <img src="Images/profil/profil.jpg" alt="Photo de vous" class="profil-image">-->
             <p class="profil-text">Je suis Noam Baroukh, étudiant en deuxième année de BTS SIO (Services Informatiques
                 aux Organisations),
                 Option SLAM (Solutions Logicielles et Application Métier) l'option spécialisée pour le développement, au
@@ -387,7 +387,6 @@
         let currentIndex = 0;
 
 
-
         document.addEventListener('keydown', (event) => {
             if (event.key === 'ArrowLeft') {
                 currentIndex = (currentIndex > 0) ? currentIndex - 1 : document.querySelectorAll('.certification img').length - 1;
@@ -397,6 +396,7 @@
                 showFullSizeImage(currentIndex);
             }
         });
+
         function showFullSizeImage(index) {
             currentIndex = index;
             fullSizeImg.src = document.querySelectorAll('.certification img')[index].src;
@@ -471,7 +471,7 @@
         </div>
     </section>
 
-<!--    permet de remonter tout en haut du site -->
+    <!--    permet de remonter tout en haut du site -->
     <a href="#" class="scroll-to-top" id="scrollToTop">
         &#8679;
     </a>
@@ -484,14 +484,14 @@
         <ul class="contact-list">
             <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=noam.baroukh.pro@gmail.com" target="_blank">
                 <img src="Images/logo/mail.png" class="image-contact">
-            </a> </li>
+            </a></li>
             <li><a href="https://github.com/N-Baroukh" target="_blank">
                 <img src="Images/outils/github.png" class="image-contact">
-            </a> </li>
+            </a></li>
             <li><a href="https://www.linkedin.com/in/noam-baroukh-b40738300/" target="_blank">
                 <img src="Images/logo/linkedin.png" class="image-contact">
             </a></li>
-            <li><a href="https://www.credly.com/users/noam-baroukh"  target="_blank">
+            <li><a href="https://www.credly.com/users/noam-baroukh" target="_blank">
                 <img src="Images/logo/credly.png" class="image-contact">
             </a></li>
         </ul>

@@ -655,6 +655,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .projet-container .image-box {
     flex: 1;
     padding-right: 20px;
@@ -693,6 +694,7 @@ footer {
 .projet-container .projet-container .project-box li strong {
     color: #333;
 }
+
 .projet-container a {
     color: #007acc;
     text-decoration: none;
@@ -723,7 +725,7 @@ footer {
 .scroll-to-top {
     position: fixed;
     bottom: 20px; /* Distance du bas */
-    right: 20px;  /* Distance de la droite */
+    right: 20px; /* Distance de la droite */
     background-color: #007bff; /* Couleur de fond bleue */
     color: #fff; /* Couleur de la flèche blanche */
     border-radius: 50%; /* Forme ronde */
@@ -824,6 +826,7 @@ footer {
     font-size: 16px;
     color: #555;
 }
+
 #competences-stage {
     background-color: #f4f4f4;
     padding: 20px;
@@ -854,6 +857,7 @@ footer {
     font-size: 16px;
     color: #555;
 }
+
 #conclusion-stage {
     background-color: #f9f9f9;
     padding: 20px;
@@ -864,18 +868,19 @@ footer {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#conclusion-stage  h2 {
+#conclusion-stage h2 {
     font-size: 22px;
     margin-bottom: 15px;
     color: #333;
 }
 
-#conclusion-stage  p {
+#conclusion-stage p {
     font-size: 16px;
     color: #555;
     line-height: 1.6;
     margin-bottom: 10px;
 }
+
 #projet-container {
     display: flex;
     justify-content: space-between;
@@ -962,6 +967,7 @@ footer {
     border: 1px solid #ccc;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 #galerie {
     background-color: #f9f9f9;
     padding: 20px;
@@ -1047,6 +1053,7 @@ footer {
     color: #555;
     line-height: 1.6;
 }
+
 #conclusion-veliko {
     background-color: #f9f9f9;
     padding: 20px;
