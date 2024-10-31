@@ -1077,3 +1077,24 @@ footer {
     line-height: 1.6;
     margin: 0;
 }
+#difficultes-rencontrees-sa {
+    background-color: #f7f7c6;
+    padding: 30px;
+}
+
+#difficultes-rencontrees-sa p {
+    margin: 0;
+}
+
+#conclusion-sa {
+    background-color: #FFD8B2;
+    padding: 30px;
+}
+
+#conclusion-sa p {
+    margin: 0;
+}
+#difficultes-rencontrees-sa h3 {
+    color : black;
+    margin: 0;
+}
