@@ -783,6 +783,47 @@ footer {
     color: #333;
 }
 
+/* Styles pour le bloc de mission */
+#mission2 {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#mission2 h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#mission2 p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+#mission2 ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#mission2 ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+#mission2 ul li strong {
+    color: #333;
+}
+
+
+
+
 /* Styles pour le bloc des outils de stage */
 #outilstage {
     background-color: #f4f4f4;
